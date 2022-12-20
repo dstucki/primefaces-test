@@ -13,15 +13,19 @@ import lombok.Data;
 @Named
 @ViewScoped
 public class TestView implements Serializable {
-    
+
     private String string;
-    private Integer integer;
-    private BigDecimal decimal;
-    private LocalDateTime localDateTime;
-    
-    @PostConstruct  
+
+    @PostConstruct
     public void init() {
-        string = "Welcome to PrimeFaces!!!";
+        string = null;
     }
 
+    public void setString(String string) {
+        this.string = string;
+    }
+
+    public String getString() {
+        return string;
+    }
 }
